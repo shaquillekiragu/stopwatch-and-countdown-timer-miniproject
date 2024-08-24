@@ -5,7 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stopwatch</title>
     <link rel="stylesheet" href="./stopwatch.css" />
-    <script src="./stopwatch.js"></script>
+    <script src="./stopwatch.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <h1 class="title">Stopwatch</h1>
+    <div class="stopwatch">
+      <div class="timeDisplay">
+        <div class="timeContainer">
+          <h2 id="time">00:00:00:00</h2>
+        </div>
+        <div class="labelContainer">
+          <h3 class="timeLabel">(Hours : Minutes : Seconds : Milliseconds)</h3>
+        </div>
+      </div>
+      <div class="buttonContainer">
+        <div class="buttons">
+          <button type="button" onclick="startWatch()">Start</button>
+          <button type="button" onclick="stopWatch()">Stop</button>
+          <button type="button" onclick="resetWatch()">Reset</button>
+        </div>
+      </div>
+    </div>
+    <a href="../">Back to home page</a>
+  </body>
 </html>
