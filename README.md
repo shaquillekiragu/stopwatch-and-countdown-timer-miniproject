@@ -2,4 +2,4 @@
 
 ## Description
 
-A miniproject that contains both a functional countdown timer and functional stopwatch, and corresponding interfaces.
+A miniproject that contains both a functional countdown timer and functional stopwatch, with corresponding interfaces.
