@@ -3,11 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stopwatch</title>
+    <title>Timer</title>
     <link rel="stylesheet" href="./timer.css" />
     <script src="./timer.js"></script>
   </head>
   <body>
-    <div></div>
+    <h1 class="title">Timer</h1>
+    <div class="timer">
+      <div class="timeDisplay">
+        <span class="timeContainer">
+          <input id="hours" type="number" maxlength="2" />
+          <input id="minutes" type="number" maxlength="2" />
+          <input id="seconds" type="number" maxlength="2" />
+        </span>
+        <div class="labelContainer">
+          <h3 class="timeLabel">(Hours : Minutes : Seconds)</h3>
+        </div>
+      </div>
+      <div class="buttonContainer">
+        <div class="buttons">
+          <button type="button" id="startButton">Start</button>
+          <button type="button" id="pauseButton">Pause</button>
+          <button type="button" id="resetButton">Reset</button>
+        </div>
+      </div>
+    </div>
+    <a href="../">Back to home page</a>
   </body>
 </html>

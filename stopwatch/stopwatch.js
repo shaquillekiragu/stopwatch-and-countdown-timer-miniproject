@@ -1,4 +1,7 @@
 const time = document.getElementById("time");
+const startButton = document.getElementById("startButton");
+const stopButton = document.getElementById("stopButton");
+const resetButton = document.getElementById("resetButton");
 
 let [hours, minutes, seconds, centiseconds] = [0, 0, 0, 0];
 let watch = null;
@@ -18,10 +21,10 @@ function stopwatch() {
     }
   }
 
-  let hrs = hours < 10 ? Number(`0${hours}`) : hours;
-  let mins = minutes < 10 ? Number(`0${minutes}`) : minutes;
-  let secs = seconds < 10 ? Number(`0${seconds}`) : seconds;
-  let centisecs = centiseconds < 10 ? Number(`0${centiseconds}`) : centiseconds;
+  let hrs = hours < 10 ? `0${hours}` : hours;
+  let mins = minutes < 10 ? `0${minutes}` : minutes;
+  let secs = seconds < 10 ? `0${seconds}` : seconds;
+  let centisecs = centiseconds < 10 ? `0${centiseconds}` : centiseconds;
 
   time.innerHTML = `${hrs}:${mins}:${secs}:${centisecs}`;
 }
@@ -29,6 +32,7 @@ function stopwatch() {
 function startWatch() {
   if (watch === null) {
     watch = setInterval(stopwatch, 10);
+    startButton.innerHTML = "Continue";
   }
 }
 
@@ -41,6 +45,7 @@ function stopWatch() {
 
 function resetWatch() {
   clearInterval(watch);
+  startButton.innerHTML = "Start";
   hours = 0;
   minutes = 0;
   seconds = 0;
@@ -48,3 +53,15 @@ function resetWatch() {
   time.innerHTML = `0${hours}:0${minutes}:0${seconds}:0${centiseconds}`;
   watch = null;
 }
+
+startButton.addEventListener("click", () => {
+  startWatch();
+});
+
+stopButton.addEventListener("click", () => {
+  stopWatch();
+});
+
+resetButton.addEventListener("click", () => {
+  resetWatch();
+});
