@@ -1,4 +1,4 @@
-# Stopwatch and Countdown Timer Mini-project
+# Stopwatch + Countdown Timer Mini-project
 
 ## Description
 
