@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timer</title>
     <link rel="stylesheet" href="./timer.css" />
-    <script src="./timer.js"></script>
+    <script src="./timer.js" defer></script>
   </head>
   <body>
+    <a class="navigateBack" href="../">Back to home page</a>
     <h1 class="title">Timer</h1>
     <div class="timer">
       <div class="timeDisplay">
-        <span class="timeContainer">
-          <input id="hours" type="number" maxlength="2" />
-          <input id="minutes" type="number" maxlength="2" />
-          <input id="seconds" type="number" maxlength="2" />
+        <div class="timeContainer">
+          <h2 id="time">00:00:00</h2>
+        </div>
+        <span class="inputContainer">
+          <input id="hours" type="number" min="0" max="99" />
+          <input id="minutes" type="number" min="0" max="59" />
+          <input id="seconds" type="number" min="0" max="59" />
         </span>
         <div class="labelContainer">
           <h3 class="timeLabel">(Hours : Minutes : Seconds)</h3>
@@ -28,6 +32,5 @@
         </div>
       </div>
     </div>
-    <a href="../">Back to home page</a>
   </body>
 </html>

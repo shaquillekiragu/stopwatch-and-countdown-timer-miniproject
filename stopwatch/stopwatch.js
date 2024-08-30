@@ -6,6 +6,10 @@ const resetButton = document.getElementById("resetButton");
 let [hours, minutes, seconds, centiseconds] = [0, 0, 0, 0];
 let watch = null;
 
+function concatZero(timeType) {
+  return timeType < 10 ? `0${timeType}` : timeType;
+}
+
 function stopwatch() {
   centiseconds++;
   if (centiseconds > 99) {
@@ -21,12 +25,9 @@ function stopwatch() {
     }
   }
 
-  let hrs = hours < 10 ? `0${hours}` : hours;
-  let mins = minutes < 10 ? `0${minutes}` : minutes;
-  let secs = seconds < 10 ? `0${seconds}` : seconds;
-  let centisecs = centiseconds < 10 ? `0${centiseconds}` : centiseconds;
-
-  time.innerHTML = `${hrs}:${mins}:${secs}:${centisecs}`;
+  time.innerHTML = `${concatZero(hours)}:${concatZero(minutes)}:${concatZero(
+    seconds
+  )}:${concatZero(centiseconds)}`;
 }
 
 function startWatch() {
@@ -45,13 +46,15 @@ function stopWatch() {
 
 function resetWatch() {
   clearInterval(watch);
-  startButton.innerHTML = "Start";
   hours = 0;
   minutes = 0;
   seconds = 0;
   centiseconds = 0;
-  time.innerHTML = `0${hours}:0${minutes}:0${seconds}:0${centiseconds}`;
+  time.innerHTML = `${concatZero(hours)}:${concatZero(minutes)}:${concatZero(
+    seconds
+  )}:${concatZero(centiseconds)}`;
   watch = null;
+  startButton.innerHTML = "Start";
 }
 
 startButton.addEventListener("click", () => {
