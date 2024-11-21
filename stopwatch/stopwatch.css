@@ -13,11 +13,6 @@ body {
   background-color: rgb(44, 44, 93);
 }
 
-.navigateBack {
-  margin: 2vh 0 0 2vw;
-  padding-top: 1px;
-}
-
 .title {
   text-align: center;
 }
@@ -92,4 +87,21 @@ body {
 button {
   width: 10vw;
   height: 5vh;
+}
+
+.navigateBackButton {
+  margin: 2vh 0 0 2vw;
+  padding-top: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10vw;
+  height: fit-content;
+  background-color: black;
+}
+
+.navigateBack {
+  margin: auto 0;
+  text-decoration: none;
+  color: white;
 }
