@@ -90,8 +90,12 @@ button {
 }
 
 .navigateBackButton {
-  margin: 2vh 0 0 2vw;
-  padding-top: 1px;
+  position: relative;
+  top: -60vh;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
