@@ -84,28 +84,7 @@ body {
   align-items: center;
 }
 
-button {
+.buttons button {
   width: 10vw;
   height: 5vh;
-}
-
-.navigateBackButton {
-  position: relative;
-  top: -60vh;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10vw;
-  height: fit-content;
-  background-color: black;
-}
-
-.navigateBack {
-  margin: auto 0;
-  text-decoration: none;
-  color: white;
 }

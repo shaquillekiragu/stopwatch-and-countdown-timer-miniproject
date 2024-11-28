@@ -1,8 +1,17 @@
+:root {
+  --customBlue: rgb(44, 44, 93);
+  --customTransparentBlue: rgba(44, 44, 93, 0.5);
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -10,18 +19,34 @@ body {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgb(44, 44, 93);
+  background-color: var(--customBlue);
+}
+
+body h3 {
+  width: 35%;
+  min-width: 300px;
+  background-color: lightgrey;
+  color: var(--customBlue);
 }
 
 .linkContainer {
-  height: 5vh;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  width: 25%;
+  height: 7.5vh;
+  margin: 0;
+}
+
+button {
+  text-decoration: none;
+  width: fit-content;
+  height: 7.5vh;
+  color: var(--customBlue);
+  font-size: xx-large;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+button:hover {
+  cursor: pointer;
 }
